@@ -4,7 +4,9 @@ function Toggle() {
   const getMode = () => {
     return JSON.parse(localStorage.getItem("mode")) || false;
   };
+
   const [darkTheme, setDarkTheme] = useState(getMode);
+
   useEffect(() => {
     localStorage.setItem("mode", JSON.stringify(darkTheme));
   }, [darkTheme]);
