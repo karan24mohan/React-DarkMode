@@ -5,11 +5,7 @@ function App() {
   const [mode, setMode] = useState("lightTheme");
 
   const theme = () => {
-    if (mode === "darkTheme") {
-      setMode("lightTheme");
-    } else {
-      setMode("darkTheme");
-    }
+    mode === "darkTheme" ? setMode("lightTheme") : setMode("darkTheme");
   };
 
   useEffect(() => {
